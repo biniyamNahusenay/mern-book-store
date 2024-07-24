@@ -1,0 +1,33 @@
+POST http://localhost:5000/upload-book
+Content-Type: application/json
+
+{
+    "authorName":"Emilia Hart",
+    "imageUrl":"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/…",
+    "category":"Fictionnn",
+    "bookDescription":"An artful variation on the historical fiction novel, Emilia Harts Weyw…",
+    "bookTitle":"Weyward",
+    "bookPdfUrl":"https://www.goodreads.com/book/show/60654349-weyward"
+}
+###
+
+GET http://localhost:5000/all-books
+###
+
+PATCH http://localhost:5000/book/669fbbb8caa6b07564f6ed7c
+Content-Type: application/json
+
+{
+"authorName":"Emilia Hart",
+"imageUrl":"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/…",
+"category":"History",
+"bookDescription":"An artful variation on the historical fiction novel, Emilia Harts Weyw…",
+"bookTitle":"Weyward",
+"bookPdfUrl":"https://www.goodreads.com/book/show/60654349-weyward"
+}
+###
+
+DELETE http://localhost:5000/book/669f9e933e5dbd8108ea0132
+###
+
+GET http://localhost:5000/all-books?category=History
